@@ -12,6 +12,7 @@ indent() {
     sed "s/^/       /"
 }
 
+
 # Initlialize
 main_indent "initlialize"
 BIN_DIR=$(cd $(dirname $0); pwd)  # absolute path
