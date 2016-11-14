@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+SECONDS=0
+
 # Fail fast and fail hard
 set -eo pipefail
 
@@ -35,4 +37,11 @@ main_indent "build step by step"
 # Store binaries
 (cd $HOME && tar cf - .vendor) | (cd $BUILD_DIR && tar xf -)
 
-main_indent "all buildpack finished"
+TIME=$SECONDS
+H=`expr ${TIME} / 3600`
+TIME=`expr ${TIME} % 3600`
+M=`expr ${TIME} / 60`
+S=`expr ${TIME} % 60`
+
+main_indent "build finished"
+main_indent "time ${H}:${M}:${S}"
