@@ -17,8 +17,8 @@ PROFILE_DIR=$5 # $BUILD_DIR/.profile.d
 imagemagick_indent "build imagemagick"
 tar -zxf $LIB_DIR/ImageMagick-7.0.1-10.tar.gz -C $INSTALL_DIR/
 
-# Write policy file
-imagemagick_indent "write policy file"
+# Copy policy file
+imagemagick_indent "copy policy file"
 cp $LIB_DIR/policy.xml $INSTALL_DIR
 
 # Set .profile.d script
