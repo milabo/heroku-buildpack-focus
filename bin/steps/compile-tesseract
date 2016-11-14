@@ -44,7 +44,7 @@ tar -zxf $LIB_DIR/tesseract.tar.gz -C $INSTALL_DIR/
 #tar -zxf $LIB_DIR/tessdata.tar.gz -C $INSTALL_DIR/tesseract/
 
 # For tesseract test
-#cp -pr $LIB_DIR/tesstest.jpg $INSTALL_DIR/tesseract/
+cp -pr $LIB_DIR/tesstest.jpg $INSTALL_DIR/tesseract/
 
 # Set .profile.d script
 tesseract_indent "set env path"
