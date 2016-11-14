@@ -2,7 +2,7 @@
 
 # Syntax sugar
 imagemagick_indent () {
-    echo "       [imagemagick] $*"
+    echo "              [imagemagick] $*"
 }
 
 # Initialize

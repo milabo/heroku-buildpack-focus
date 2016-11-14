@@ -2,7 +2,7 @@
 
 # Syntax sugar
 tesseract_indent () {
-    echo "       [tesseract] $*"
+    echo "              [tesseract] $*"
 }
 
 # Initialize

@@ -2,7 +2,7 @@
 
 # Syntax sugar
 mecab_indent () {
-    echo "       [mecab] $*"
+    echo "              [mecab] $*"
 }
 
 # Initialize

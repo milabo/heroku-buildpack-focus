@@ -2,7 +2,7 @@
 
 # Syntax sugar
 opencv_indent () {
-    echo "       [opencv] $*"
+    echo "              [opencv] $*"
 }
 
 # Initialize
