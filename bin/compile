@@ -40,14 +40,14 @@ main_indent "build step by step"
 main_indent "a"
 TIME=$SECONDS
 main_indent "b"
-H=`expr ${TIME} / 3600`
+H=`expr $TIME / 3600`
 main_indent "c"
-TIME=`expr ${TIME} % 3600`
+TIME=`expr $TIME % 3600`
 main_indent "d"
-M=`expr ${TIME} / 60`
+M=`expr $TIME / 60`
 main_indent "e"
-S=`expr ${TIME} % 60`
+S=`expr $TIME % 60`
 main_indent "f"
 
 main_indent "build finished"
-main_indent "time ${H}:${M}:${S}"
+main_indent "time $H:$M:$S"
