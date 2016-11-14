@@ -37,17 +37,7 @@ main_indent "build step by step"
 # Store binaries
 (cd $HOME && tar cf - .vendor) | (cd $BUILD_DIR && tar xf -)
 
-main_indent "a"
-PT=$SECONDS
-main_indent "b"
-H=`expr ${PT} / 3600`
-main_indent "c"
-PT=`expr ${PT} % 3600`
-main_indent "d"
-M=`expr ${PT} / 60`
-main_indent "e"
-S=`expr ${PT} % 60`
-main_indent "f"
 
 main_indent "build finished"
-main_indent "time ${H}:${M}:${S}"
+#main_indent "time ${H}:${M}:${S}"
+main_indent "time : $SECONDS sec"
