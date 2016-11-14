@@ -38,16 +38,16 @@ main_indent "build step by step"
 (cd $HOME && tar cf - .vendor) | (cd $BUILD_DIR && tar xf -)
 
 main_indent "a"
-TIME=$SECONDS
+PT=$SECONDS
 main_indent "b"
-H=`expr $TIME / 3600`
+H=`expr ${PT} / 3600`
 main_indent "c"
-TIME=`expr $TIME % 3600`
+PT=`expr ${PT} % 3600`
 main_indent "d"
-M=`expr $TIME / 60`
+M=`expr ${PT} / 60`
 main_indent "e"
-S=`expr $TIME % 60`
+S=`expr ${PT} % 60`
 main_indent "f"
 
 main_indent "build finished"
-main_indent "time $H:$M:$S"
+main_indent "time ${H}:${M}:${S}"
