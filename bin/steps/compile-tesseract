@@ -17,28 +17,31 @@ rm -rf $CACHE_DIR/tesseract
 
 # Build leptonica
 tesseract_indent "build leptonica"
-curl -s -L http://www.leptonica.com/source/leptonica-1.71.tar.gz | tar zx -C $CACHE_DIR
-cd $CACHE_DIR/leptonica-1.71
-./configure --silent --prefix=$INSTALL_DIR/leptonica-1.71
-make --silent | indent
-make --silent install | indent
+tar -zxf $LIB_DIR/leptonica-1.71.tar.gz -C $INSTALL_DIR/
+#curl -s -L http://www.leptonica.com/source/leptonica-1.71.tar.gz | tar zx -C $CACHE_DIR
+#cd $CACHE_DIR/leptonica-1.71
+#./configure --silent --prefix=$INSTALL_DIR/leptonica-1.71
+#make --silent | indent
+#make --silent install | indent
 #tar -zxf $LIB_DIR/leptonica-1.71.tar.gz -C $CACHE_DIR
 #cd $CACHE_DIR/leptonica-1.71
 #make install --silent | indent
 #ldconfig
 
 # Build tesseract
-tesseract_indent "build tesseract"
-mkdir -p $CACHE_DIR/tesseract
-cp -r $LIB_DIR/tesseract $CACHE_DIR/
+#tesseract_indent "build tesseract"
+tesseract_indent "build tesseract and langdata"
+tar -zxf $LIB_DIR/tesseract.tar.gz -C $INSTALL_DIR/
+#mkdir -p $CACHE_DIR/tesseract
+#cp -r $LIB_DIR/tesseract $CACHE_DIR/
 #curl -s -L http://nethive.info/lib_dev/tesseract.tar.gz | tar zx -C $CACHE_DIR
-cd $CACHE_DIR/tesseract
-make install --silent | indent
-rm -rf $INSTALL_DIR/tesseract/lib/libtesseract.a
+#cd $CACHE_DIR/tesseract
+#make install --silent | indent
+#rm -rf $INSTALL_DIR/tesseract/lib/libtesseract.a
 
 # Build langdata
-tesseract_indent "build langdata"
-tar -zxf $LIB_DIR/tessdata.tar.gz -C $INSTALL_DIR/tesseract/
+#tesseract_indent "build langdata"
+#tar -zxf $LIB_DIR/tessdata.tar.gz -C $INSTALL_DIR/tesseract/
 
 # For tesseract test
 #cp -pr $LIB_DIR/tesstest.jpg $INSTALL_DIR/tesseract/
